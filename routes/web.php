@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostController@index');
-Route::get('/post/{post}', 'PostController@show')->name('post');
+Route::get('/', 'PageController@index');
+Route::get('/post/{post}', 'PageController@show')->name('post');
 
 Auth::routes();
