@@ -17,8 +17,13 @@ class Post extends Model
                 'onUpdate' => true
             ]
         ];
-    }    
-    //
+    }
+    
+    public function getGetExcerptAttribute()
+    {
+        return substr($this->body, 0, 50).'...';
+    }
+
     public function User()
     {
         return $this->belongsTo('App\User');
