@@ -13,7 +13,7 @@
                         <h4 class="card-title">{{$post->title}}</h4>
                         <p class="card-text">
                             {{$post->get_excerpt}} 
-                            <a href="{{route('post', $post)}}">Leer Mas</a> 
+                            <a href="{{route('blog', $post)}}">Leer Mas</a> 
                         </p>
                     </div>
                 </div>
