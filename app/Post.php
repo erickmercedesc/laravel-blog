@@ -27,6 +27,13 @@ class Post extends Model
         return substr($this->body, 0, 50).'...';
     }
 
+    public function getGetImageAttribute()
+    {
+        if($this->image){
+            return url("storage/$this->image");
+        }
+    }
+
     public function User()
     {
         return $this->belongsTo('App\User');

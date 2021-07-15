@@ -8,9 +8,12 @@
                     <div class="card-body">
                         <p class="text-muted">
                             {{$post->user->name}} &ndash; {{$post->created_at->format('d M Y')}}
-                        </p>
-
+                        </p>                        
                         <h4 class="card-title">{{$post->title}}</h4>
+
+                        @if($post->image)
+                            <img src="{{ $post->get_image }}" class="card-img-top">
+                        @endif
                         <p class="card-text">
                             {{$post->get_excerpt}} 
                             <a href="{{route('blog', $post)}}">Leer Mas</a> 
